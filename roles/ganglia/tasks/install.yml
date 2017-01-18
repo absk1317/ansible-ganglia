@@ -1,0 +1,12 @@
+---
+- name: Install Ganglia
+  apt: name=ganglia-monitor state=latest update_cache=true
+  become: yes
+  become_method: sudo
+
+- name: Copy gmond configuration
+  template: src=gmond_config dest=/etc/ganglia/gmond.conf owner=root group=root
+  become: yes
+  become_method: sudo
+
+

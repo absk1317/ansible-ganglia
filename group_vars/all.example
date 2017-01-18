@@ -1,0 +1,5 @@
+# Client
+client_address: CLIENT_ADDRESS_HERE
+cluster_name: CLUSTER_NAME_HERE
+ganglia_port: GANGLIA_PORT_HERE
+ganglia_master_address: GANGLIA_MASTER_IP_HERE

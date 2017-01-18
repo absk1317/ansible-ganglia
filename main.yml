@@ -1,0 +1,12 @@
+# Install python and aptitude on the target machines (apt-get install python aptitude)
+# Copy ssh public key to machines (ssh-copy-id user@host)
+---
+- name: Install Ganglia
+  hosts: clients
+  become: yes
+  become_method: sudo
+  pre_tasks:
+    - name: apt update
+      raw: apt update -qq
+  roles:
+    - ganglia
